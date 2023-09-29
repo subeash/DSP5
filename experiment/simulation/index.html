@@ -1,101 +1,126 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial;}
-
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-</style>
-</head>
-<body>
-
-<p>"click" on the  button, to open the corresponding experiment.</p>
-
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'p1')" id="defaultOpen">Part 1 of the Experiment</button>
-  <button class="tablinks" onclick="openCity(event, 'p2')">Part 2 of the Experiment</button>
-  
-</div>
-
-<div id="p1" class="tabcontent">
-  
- 						      <iframe id="heat"
-								title="heatexch"
-								width="1400"
-								height="800"
-								src="5a.html">
-							  </iframe>
-                            
-</div>
-
-<div id="p2" class="tabcontent">
-  
-  
- 						      <iframe id="heat"
-								title="heatexch"
-								width="1400"
-								height="800"
-								src="5b.html">
-							  </iframe>
-                             
-</div>
-
-
-
+<html lang="en" dir="ltr">
+  <head>
+    <title>Study of convolution: series and parallel system</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/adi.css">
+    <link rel="stylesheet" href="./css/adik.css">
+    <!--
+    This HTML file is designed and developed by
+    Aditya Kameswara Rao Nandula
+    Senior Research Fellow,
+    Virtual Labs IIT Kharagpur.
+    LinkedIn: https://www.linkedin.com/in/akraonandula/
+    Updated on: 06-05-2022
+  -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71919978-6"></script>
 <script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+  gtag('config', 'UA-71919978-6');
 </script>
-   
-</body>
-</html> 
+  </head>
+  <body>
+    <div class="container ce">
+      <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">
+          <div class="col-sm-12">
+            <header>
+              <div class="row ce ">
+                <div class="col-sm-3 "> <img src="./images/vlabs.png" class="img-fluid pi1"
+                    alt="VLabs Logo">
+                  </div>
+                <div class="col-sm-6  tex">
+                  <h1><strong> Virtual Labs <br>
+                      IIT Kharagpur</strong></h1>
+                </div>
+                <div class="col-sm-3 ">
+                   <img src="./images/iitkgp.png" class=" img-fluid pi2" alt="IIT Kharagpur Logo">
+                </div>
+              </div>
+
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h3>Study of convolution: series and parallel system</h3>
+                </div>
+              </div>
+              <hr>
+            </header>
+          </div>
+        </div>
+        <div class="container ce">
+          <div class="row bg-secondary text-white p-3 my-3">
+            <div id="qqd" class="col-sm-3"></div>
+            <div class="col-sm-6"></div>
+            <!--<div  id="qqsc" class="col-sm-3"></div>-->
+            <div id="qqt" class="col-sm-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="container" >
+        <div class="row ">
+        <div class="col-sm-12">
+         <button id="part1" class = "btn btn-primary"  onclick="window.open('p1.html')" target="_blank"> Part 1</button>
+         <button id="part2" class = "btn btn-primary"  onclick="window.open('p2.html')" target="_blank"> Part 2</button>
+         <button id="part3" class = "btn btn-primary"  onclick="window.open('p3.html')" target="_blank"> Part 3</button>
+        </div>
+      </div>
+            
+              
+            </div>
+           
+
+
+      <div class="container">
+        <div class="jumbotron  ce">
+          <footer>
+            <div class="row ce">
+              <div class="col-sm-12">
+                <p><i> Copyright ©2021 Virtual labs IIT Kharagpur</i><br>
+                <a href="../../license/index.html" target="_blank"> Licensing Terms </a></p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+
+    </div>
+    <script>
+        
+    </script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/plotly.js"></script>
+    <script src="./js/plain-draggable.js"></script>
+    <script src="./js/leaderline.min.js"></script>
+    <script src="./js/d3.v5.js"></script>
+    <script type="text/javascript" src="./js/adidspex5s.js"></script>
+    <script type="text/javascript" src="./js/knob.js"></script>
+    <script type="text/javascript" src="./js/ui.js"></script>
+    <script type="text/javascript" src="./js/ui.el.js"></script>
+    <script type="text/javascript" src="./js/p1.js"></script>
+    <script type="text/javascript" src="./js/adik.js"></script>
+    <script type="text/javascript" src="./js/tex-chtml-full.js"> </script>
+          <svg>
+              <filter id="dropshadow" height="150%" width="150%">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+                  <feOffset dx="0" dy="3" result="offsetblur"/>
+                  <feMerge>
+                      <feMergeNode/>
+                      <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+              </filter>
+          </svg>
+  </body>
+</html>
