@@ -40,5 +40,6 @@
 
 SrNo | Name | VLabs Developer or Integration Engineer | Designation | Department| Institute
 :--|:--|:--|:--|:--|:--|
-1 | **Chandan Mishra** |Developer | Project Scientist | Department of Mechanical Engineering | IIT Kharagpur | 
-1 | **Subhasis Mahata** |AWS Integration Engineer | Senior Project Scientist | Department of Mechanical Engineering | IIT Kharagpur | 
+1 | **Anirban das** |Developer | Junior Project Assistant | Department of Mechanical Engineering | IIT Kharagpur |
+2 | **Chandan Mishra** |Developer | Project Scientist | Department of Mechanical Engineering | IIT Kharagpur | 
+3 | **Subhasis Mahata** |AWS Integration Engineer | Senior Project Scientist | Department of Mechanical Engineering | IIT Kharagpur | 
