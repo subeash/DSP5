@@ -1,0 +1,249 @@
+<!--Lab:exp_5_Part1_Decoder
+	File name: exp5p1.html
+    Author:Prakriti Dhang--->
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table, th,td {
+            border: 1.5px solid black;
+      border-collapse: collapse;
+     
+    }
+    th, td {
+      padding: 3px;
+      
+      text-align: center;  
+    }
+    table.center {
+      margin-left: auto; 
+      margin-right: auto;
+    }
+    ol li{
+                padding-left:1em;
+                padding-bottom: 0.3em;
+            }
+     #addbar{
+         text-decoration: overline;
+     }
+     .responsive {
+  width: 100%;
+  height: auto;
+}
+    
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/style_exp5p1.css">
+    <script type="text/javascript" src="js/circuit_exp5p1.js"></script>
+    <script type="text/javascript" src="js/addtbl.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id="">
+    </script>
+
+
+    <!--script type="text/javascript" src="mathjax.js"></script-->
+    </head>
+    <body style="background-color: #0d213b; ">
+        <div class="row">
+            <img src="images/iitkgp.png" style="width:100px;height:100px;" class="responsive"/>
+        </div>
+        <div class="row">
+            <b><h2 style="text-align:center;color:rgb(54, 230, 78); ">Analysis and Synthesis of Logic Functions using 3:8 Decoder (IC 74138)</h2></b>
+        </div>
+    <div class="row">
+      <div class="column" >
+        <div id="inst" style="background-color: #96baf0;   font-size: 16px;font-weight: bold; border:2px solid #3385ff;">
+            <div class="dropdown">
+                <p style="text-align:center;color:rgb(26, 0, 97)"> INSTRUCTION</p>
+                <div class="dropdown-content" style="background-color:white;  border:2px solid #3385ff;" >
+                    <ol type="1">
+                        <li>Apply high volatge to V<sub>CC</sub> and G1, and low level voltage to ground(GND)</li>
+                        <li>Apply low voltage to all the select inputs (CBA). Check Y0 is at low state and all other are at high state.</li>
+                        <li>Apply low voltage to CB and high volatge to A.  Check Y1 is at low state and all other are at high state.</li>
+                        <li>Click "Add to table" after every inputs. This will create the truth table in the below section.</li>
+                        <li><b>Note</b>: Red button symbolize as Low (L), Green button symbolize as High(H).</li>
+                    </ol> 
+                    <ul>
+                        <!--li><b>Equation: <span style="text-decoration: overline;"> Y0</span> = complement of  <span style="text-decoration: overline;"> CBA</span> = C+B+A</b></li-->
+                        
+                    </ul>
+    
+                </div>
+            </div>
+        </div>
+        <br>
+        
+        <!--div id="reading" style="background-color: #96baf0;    font-size: 16px;font-weight: bold;">
+    <div class="title">
+                <p style="text-align:center;color:white"> READINGS</p>
+                <div class="rtbl" style="background-color:white; border:2px solid #3385ff;">
+                <p> Strobe	<input type="text" value="" id="dec" placeholder="Strobe" style="background-color:#e6f5ff; width:50px"  readonly=""></p>
+        <p>Select Lines <input type="text" value="" id="inp" placeholder="Input" style="background-color:#e6f5ff; width:50px" readonly=""></p>
+        <center><input type="button" id="add"  value="Insert to Table" onclick="intbl()" style=" background-color: #d9e2f0;  cursor:pointer;font-size: 16px;font-weight: bold; "/></center>
+                <br></div>
+                </div>
+                </div-->
+        
+        <div id="tablein" style="background-color: #96baf0;   font-size: 16px;font-weight: bold; border:2px solid #3385ff;">
+    <div class="tbtitle">
+                <p style="text-align:center;color:rgb(26, 0, 97)"> <!--input type="text" value="" id="inp" placeholder="Input (CBA)" style="background-color:#e6f5ff; float:left; width:80px; " readonly="" -->TRUTH TABLE 
+                    <input type="button" id="add"  value="Add to Table"  onclick="aintbl()" style=" background-color: #d9e2f0;  float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97);"/></p>
+                <div class="intbl" style="background-color:white; border:2px solid #3385ff;">
+                    <!--table id="tablem"><tr> <td>
+                    <input type="button" name="TR1" value="Truth Table 1"  class="btn_sub1" onclick="dist1();" style="background-color:rgb(146, 168, 238);border:2px solid #0a59cf;"/--> <br><br>
+                    <p id="eq" style="text-align: center; "><b></b></p>
+    
+                <center>
+                <table id = "mytable1"  class="center"  >
+            <!--caption><b>Truth Table</b></caption-->
+            <tr> 
+                <th colspan="12">3:8 Decoder</th>
+                         </tr>
+            <tr>
+           <th rowspan="2"> Decimal</th>
+            <th colspan="3">Select Inputs</th>
+            <th  colspan ="8">Outputs</th>
+            
+               </tr>
+<tr>
+    
+
+    <td> C</td>
+    <td>B</td>
+    <td>A</td>
+
+    <td id="addbar">Y0</td>
+    <td id="addbar">Y1</td>
+    <td id="addbar">Y2</td>
+    <td id="addbar">Y3</td>
+    <td id="addbar">Y4</td>
+    <td id="addbar">Y5</td>
+    <td id="addbar">Y6</td>
+    <td id="addbar">Y7</td>
+</tr>
+<!--tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr-->
+                </table>
+                </div>
+    
+    </div>
+    </div>
+    
+    <br>
+    <!-- div >
+        
+            
+        <div id="showalt" class="dropdown-content" style="background-color:white;  border:4px solid #fa0606; visibility: hidden;" >
+            <p class="con" id="v"  style="color:red; font-weight: bold; text-align: center; font-size: large;">Connect Vcc properly</p>
+            <p class="con" id="gnd" style="color:red; text-align: center; font-size: large; font-weight: bold;">Connect Gnd properly. GND should be low.</p>
+            <p class="con" id="g1" style="color:red; text-align: center; font-size: large; font-weight: bold;">Connect G1 properly</p>
+
+            
+        </div>
+    
+    </div -->
+      </div>
+    
+      <div class="column" style="float:right;">
+        <div id="cmaind" style="background-color: #96baf0;    font-size: 16px;font-weight: bold; border:2px solid #3385ff;">
+    <div class="ctitle" >
+                <p style="text-align:center;color:rgb(26, 0, 97)">CIRCUIT DIAGRAM</p>
+                
+                <div class="crkt" style="background-color:white; position:absolute;  border:2px solid #3385ff;">
+                
+                <img class="mimg" src="images/main_cir.jpg" alt="circuit image" />
+                <!--img class="mimg1" src="y1.JPG" alt="circuit image" /-->
+                <div id="b1r"></div>
+                <div id="b1g"></div>
+                <div id="b2r"></div>
+                <div id="b2g"></div>
+                <div id="b3r"></div>
+                <div id="b3g"></div>
+                <div id="b4r"></div>
+                <div id="b4g"></div>
+                <div id="b5r"></div>
+                <div id="b5g"></div>
+                <div id="b6r"></div>
+                <div id="b6g"></div>
+
+                
+    
+    
+    
+    
+    
+    
+    
+                <img id="b1" onclick="a1()"  src="images/off.png" />
+                <img id="b2" onclick="a2()" src="images/off.png">
+    <img id="b3" onclick="a3()" src="images/off.png">
+    <img id="b4" onclick="a4()" src="images/off.png">
+     <img id="b5" onclick="a5()"  src="images/off.png">
+    <img id="b6" onclick="a6()" src="images/off.png">
+    <img id="led0" src="images/led_onc.png" alt="circuit image"  />
+    <img id="led1" src="images/led_onc.png" alt="circuit image"  />
+    <img id="led2" src="images/led_onc.png" alt="circuit image"  />
+    <img id="led3" src="images/led_onc.png" alt="circuit image"  />
+    <img id="led4" src="images/led_onc.png" alt="circuit image"  />
+    <img id="led5" src="images/led_onc.png" alt="circuit image"  />
+    <img id="led6" src="images/led_onc.png" alt="circuit image"  />
+    <img id="led7" src="images/led_onc.png" alt="circuit image"  />
+
+
+    
+    
+    <!--img id="y1"  src="cir001.jpg" style="visibility:hidden;" /-->
+    <!--img id="y1"  src="ciry7.jpg"  /-->
+
+    <!--img id="y3"  src="ciry3.jpg" style="visibility:hidden;" /-->
+    
+                </div>
+                
+                
+                </div>
+                
+    
+                
+    
+    </div>
+    
+    
+    <div >
+        
+        
+        <div id="showalt" class="dropdown-content blink" style="background-color:white;  border:4px solid #fa0606; position:absolute; top:140px; width: 250px; right:50px;  visibility: hidden;" >
+            <!--p style="text-align:center;color:rgb(238, 10, 10); font-size: large; font-weight: bold;">ALERT</p-->
+            <p class="con blink" id="v"  style="color:red; font-weight: bold; text-align: center; font-size: large;">Connect Vcc properly</p>
+            <p class="con blink" id="gnd" style="color:red; text-align: center; font-size: large; font-weight: bold;">Connect Gnd properly. GND should be low.</p>
+            <p class="con blink" id="g1" style="color:red; text-align: center; font-size: large; font-weight: bold;">Connect G1 properly</p>
+       
+            
+        </div>
+    
+    </div>
+        
+    
+    
+    
+      </div>
+    </div>
+    
+    </body>
+    
+    
+    
+    </html>
+    
